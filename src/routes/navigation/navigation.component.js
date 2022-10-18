@@ -7,12 +7,8 @@ import { ReactComponent as Logo } from '../../assets/logo.svg';
 import './navigation.styles.scss';
 
 const Navigation = () => {
-  const { currentUser, setCurrentUser } = useContext(UserContext);
+  const { currentUser } = useContext(UserContext);
 
-  const signOutHandler = async () => {
-    await signOutUser();
-    setCurrentUser(null);
-  };
   return (
     <Fragment>
       <nav className="navigation">
@@ -30,7 +26,7 @@ const Navigation = () => {
           </li>
           <li>
             {currentUser ? (
-              <Link className="nav-link" to="/" onClick={signOutHandler}>
+              <Link className="nav-link" to="/" onClick={signOutUser}>
                 Sign out
               </Link>
             ) : (
