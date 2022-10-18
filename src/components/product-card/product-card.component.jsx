@@ -4,10 +4,10 @@ import { useContext } from 'react';
 import { CartContext } from '../../contexts/cart.context';
 
 const ProductCard = ({ product }) => {
-  const { addItemToCart } = useContext(CartContext);
+  const { incrementCartItem } = useContext(CartContext);
 
   const onClickHandler = () => {
-    addItemToCart(product);
+    incrementCartItem(product);
   };
 
   const { name, imageUrl, price } = product;
