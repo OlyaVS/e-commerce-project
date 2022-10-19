@@ -1,6 +1,7 @@
 .product-card-container {
   position: relative;
   width: 100%;
+  min-width: 215px;
   display: flex;
   flex-direction: column;
   height: 350px;
