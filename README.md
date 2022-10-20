@@ -1,5 +1,5 @@
 E-commerce-app:
 * React
 * React Router
-* Sass
+* Styled-components
 * Firebase for DB and Authentication
