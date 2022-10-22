@@ -4,6 +4,7 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { loggerMiddleware } from '../middleware/logger';
 // import { logger } from 'redux-logger/src'; used self made middleware instead
+import thunk from 'redux-thunk';
 
 // "user" comes from auth state listener
 const persistConfig = {
@@ -14,7 +15,9 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-const middleWares = [process.env.NODE_ENV !== 'production' && loggerMiddleware].filter(Boolean);
+const middleWares = [process.env.NODE_ENV !== 'production' && loggerMiddleware, thunk].filter(
+  Boolean
+);
 
 // no window object during build step on the server
 const composeEnhancer =
