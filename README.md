@@ -1,5 +1,7 @@
 E-commerce-app:
 * React
 * React Router
-* Styled-components
+* Redux for global state management
+* Reselect for memoized selectors
+* Styled-components 
 * Firebase for DB and Authentication
