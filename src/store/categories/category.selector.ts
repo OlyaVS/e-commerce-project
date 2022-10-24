@@ -1,7 +1,9 @@
 import { createSelector } from 'reselect';
+import { CategoriesState } from './category.reducer';
+import { CategoryMap } from './category.types';
 
 // initial selector that gives back a slice of reducer we need
-const selectCategoryReducer = (state) => state.categories;
+const selectCategoryReducer = (state): CategoriesState => state.categories;
 
 // create a memoized selector, will re-run only if categoriesSlice is different
 export const selectCategories = createSelector(
@@ -10,12 +12,14 @@ export const selectCategories = createSelector(
 );
 
 // as long as category array does not change do not re-run reduce
-export const selectCategoriesMap = createSelector([selectCategories], (categories) =>
-  categories.reduce((acc, category) => {
-    const { title, items } = category;
-    acc[title.toLowerCase()] = items;
-    return acc;
-  }, {})
+export const selectCategoriesMap = createSelector(
+  [selectCategories],
+  (categories): CategoryMap =>
+    categories.reduce((acc, category) => {
+      const { title, items } = category;
+      acc[title.toLowerCase()] = items;
+      return acc;
+    }, {} as CategoryMap)
 );
 
 export const selectCategoriesIsLoading = createSelector(
