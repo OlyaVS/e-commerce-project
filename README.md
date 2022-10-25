@@ -4,7 +4,8 @@ E-commerce-app:
 * Redux for global state management
 * Redux Persis for persisting and rehydrating state from Local Storage
 * Redux DevTools
-* Redux-Thunk for separating business logic from components
+* Redux-Sagas for separating business logic from components
+* TypeScript 
 * Reselect for memoized selectors
 * Styled-components 
 * Firebase for DB and Authentication
