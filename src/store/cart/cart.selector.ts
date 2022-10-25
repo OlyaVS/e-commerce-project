@@ -1,11 +1,7 @@
-// cart items - cardDropDown, checkout
-// is CartOpen - navigation
-// cartItemsCount - cartIcon
-// cartTotal - checkout
-
 import { createSelector } from 'reselect';
+import { CartState } from './cart.reducer';
 
-const selectCartItemsReducer = (state) => state.cart;
+const selectCartItemsReducer = (state): CartState => state.cart;
 
 export const selectCartItems = createSelector(
   [selectCartItemsReducer],
