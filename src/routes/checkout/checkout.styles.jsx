@@ -15,7 +15,6 @@ export const CheckoutHeader = styled.ul`
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid darkgray;
-  list-style: none;
 `;
 
 export const HeaderBlock = styled.li`
