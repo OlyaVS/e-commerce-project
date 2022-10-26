@@ -1,10 +1,10 @@
 import { useState, FormEvent, ChangeEvent } from 'react';
-import FormInput from '../form-input/form-input.component';
-import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
-import { SignUpContainer } from './sign-up-form.styles';
 import { useDispatch } from 'react-redux';
 import { signUpStart } from '../../store/user/user.action';
 import { AuthError, AuthErrorCodes } from 'firebase/auth';
+import { SignUpContainer } from './sign-up-form.styles';
+import FormInput from '../form-input/form-input.component';
+import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
 const SignUpForm = () => {
   const dispatch = useDispatch();

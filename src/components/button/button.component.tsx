@@ -1,5 +1,5 @@
-import { BaseButton, ButtonSpinner, GoogleSignInButton, InvertedButton } from './button.styles';
 import React, { FC, ButtonHTMLAttributes } from 'react';
+import { BaseButton, ButtonSpinner, GoogleSignInButton, InvertedButton } from './button.styles';
 
 export enum BUTTON_TYPE_CLASSES {
   base = 'base',

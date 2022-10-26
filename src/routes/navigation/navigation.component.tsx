@@ -1,5 +1,5 @@
-import { Outlet } from 'react-router-dom';
 import { Fragment } from 'react';
+import { Outlet } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import CartIcon from '../../components/cart-icon/cart-icon.component';

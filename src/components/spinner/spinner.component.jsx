@@ -1,4 +1,3 @@
-import './spinner.styles';
 import { SpinnerContainer, SpinnerOverlay } from './spinner.styles';
 
 export const Spinner = () => {

@@ -1,6 +1,6 @@
-import DirectoryItem from '../directory-item/directory-item.component';
-import { DirectoryContainer } from './directory.styles';
 import { Link } from 'react-router-dom';
+import { DirectoryContainer } from './directory.styles';
+import DirectoryItem from '../directory-item/directory-item.component';
 
 const categories = [
   {
